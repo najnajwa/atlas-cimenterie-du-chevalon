@@ -1,0 +1,34 @@
+name: Build Atlas Chevalon .exe
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: atlas-electron
+
+      - name: Build Windows installer
+        run: npx electron-builder --win --x64
+        working-directory: atlas-electron
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Atlas-Chevalon-Windows
+          path: atlas-electron/dist/*.exe
+          retention-days: 30
