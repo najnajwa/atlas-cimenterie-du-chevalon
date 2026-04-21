@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════
+  ATLAS CHEVALON — DISTRIBUTION
+═══════════════════════════════════════════════════════
+
+POUR DISTRIBUER L'APPLICATION À QUELQU'UN
+──────────────────────────────────────────
+
+  Option A — Tu as déjà le fichier .exe installateur
+    → Envoie-lui le fichier  "Atlas Chevalon Setup X.X.X.exe"
+    → Il double-clique, installe, c'est prêt
+    → Au premier lancement, l'app lui demande sa clé API Mammouth
+
+  Option B — Tu veux générer le .exe toi-même
+    → Installe Node.js si pas encore fait : https://nodejs.org
+    → Double-clique sur  BUILD.bat
+    → Attends ~5 minutes (téléchargement Electron)
+    → Le .exe apparaît dans le dossier  dist/
+
+
+POUR L'UTILISATEUR FINAL
+─────────────────────────
+
+  1. Double-cliquer sur  "Atlas Chevalon Setup X.X.X.exe"
+  2. Installer (bouton Suivant)
+  3. L'application s'ouvre et demande la clé API Mammouth
+     → Obtenir une clé : https://mammouth.ai/ > Settings > API
+  4. Entrer la clé et cliquer "Enregistrer et continuer"
+  5. C'est tout — l'atlas est prêt
+
+  Les données sont stockées dans :
+  C:\Users\[nom]\AppData\Roaming\Atlas Chevalon\
+
+
+NOTES
+─────
+  - Aucune installation de Node.js requise pour l'utilisateur final
+  - La clé API n'est demandée qu'une seule fois
+  - Les photos et données persistent entre les mises à jour
+
+═══════════════════════════════════════════════════════
